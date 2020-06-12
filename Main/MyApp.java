@@ -14,9 +14,11 @@ public class MyApp
         boolean isOldMovie = true;
         System.out.println("구작인 가요?");
         int age = 0;
-        System.out.print("나이를 입력하세요 : ");
+        System.out.println("나이를 입력하세요 : ");
+        isOldMovie = sc.nextBoolean();
         age = sc.nextInt();
         RentalDVDService R = new RentalDVDService();
-        R.discountCalculation(age, isOldMovie);
+        double t = R.discountCalculation(age, isOldMovie);
+        System.out.println(t);
     }
 } 
